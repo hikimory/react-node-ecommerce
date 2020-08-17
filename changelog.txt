@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Nodemon configuration.
 - Axios library.
 - Ability to fetch server data on home page.
+- Redux library.
 
 ### Fixed
 - HomePage page.
