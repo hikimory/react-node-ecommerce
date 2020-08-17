@@ -1,2 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+
+## [0.1.0] - 2020-08-17
+### Added
+- Base react application.
+- HomePage and ProductPage.
+- Base backend.
+- Nodemon configuration.
+- Axios library.
+- Ability to fetch server data on home page.
+- Redux library.
+
+### Fixed
+- HomePage page.
