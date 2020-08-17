@@ -7,7 +7,7 @@ export const HomePage = (props) => {
     <ul className="products">
     {
       data.products.map(product =>
-        <li>
+        <li key={product._id}>
           <div className="product">
             <Link to={'/product/' + product._id}>
               <img className="product-image" src={product.image} alt="product" />

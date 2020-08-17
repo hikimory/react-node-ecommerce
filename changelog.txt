@@ -5,3 +5,8 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Base react application.
 - HomePage and ProductPage.
+- Base backend.
+- Nodemon configuration.
+
+### Fixed
+- HomePage page.
