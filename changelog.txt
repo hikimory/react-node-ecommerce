@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 - HomePage and ProductPage.
 - Base backend.
 - Nodemon configuration.
+- Axios library.
+- Ability to fetch server data on home page.
 
 ### Fixed
 - HomePage page.
