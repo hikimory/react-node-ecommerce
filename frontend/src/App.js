@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Link} from 'react-router-dom'
 import {HomePage} from './pages/HomePage';
 import {ProductPage} from './pages/ProductPage';
+import { CartPage } from './pages/CartPage';
 
 function App() {
   const openMenu = () => {
@@ -46,6 +47,7 @@ function App() {
         <main className="main">
           <div className="content">
             <Route path="/product/:id" component={ProductPage} />
+            <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
           </div>
         </main>
