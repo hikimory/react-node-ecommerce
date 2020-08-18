@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 ## [0.2.0] - 2020-08-18
 ### Added
 - Redux to product page.
+- CartPage.
+- Styles fot cart page.
+- Redux to cart page.
+- Cookie.
 
 ## [0.1.0] - 2020-08-17
 ### Added
