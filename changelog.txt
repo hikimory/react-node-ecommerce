@@ -8,6 +8,9 @@ All notable changes to this project will be documented in this file.
 - Styles fot cart page.
 - Redux to cart page.
 - Cookie.
+- Connection to MongoDB.
+- User's route.
+- Environment variables.
 
 ## [0.1.0] - 2020-08-17
 ### Added

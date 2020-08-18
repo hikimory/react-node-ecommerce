@@ -1,8 +1,13 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const data = require('./data')
+const config = require('./config')
+const userRoute = require('./routes/userRoute')
 
+const PORT = config.PORT
 const app = express()
 
+app.use("/api/users", userRoute);
 app.get('/api/products', (req, res) => {
     res.send(data)
 })
@@ -16,4 +21,18 @@ app.get("/api/products/:id", (req, res) => {
       res.status(404).send({ msg: "Product Not Found." })
 });
 
-app.listen(5000, () => console.log('Server has been started...'))
+async function start()
+{
+    try {
+        await mongoose.connect(config.MONGODB_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true
+          })
+          app.listen(PORT, () => console.log(`App has been started on port ${PORT}...`))
+    } catch (e) {
+        console.log('Server Error', e.message)
+    }
+}
+
+start()
