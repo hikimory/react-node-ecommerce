@@ -7,7 +7,9 @@ const userRoute = require('./routes/userRoute')
 const PORT = config.PORT
 const app = express()
 
-app.use("/api/users", userRoute);
+app.use(express.json())
+
+app.use("/api/users", userRoute)
 app.get('/api/products', (req, res) => {
     res.send(data)
 })
