@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const User = require('../models/User')
-const getToken = require('../util')
+const { getToken } = require('../util')
 const router = Router()
 
 router.post('/signin', async (req, res) => {

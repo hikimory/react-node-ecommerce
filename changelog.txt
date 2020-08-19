@@ -7,6 +7,11 @@ All notable changes to this project will be documented in this file.
 - Authorization and registration route.
 - Redux to SigninPage and RegisterPage.
 - JWT token.
+- Product model.
+- Product management page.
+- Product route.
+- Middleware.
+- Redux to product management page.
 
 ## [0.2.0] - 2020-08-18
 ### Added

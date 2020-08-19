@@ -6,6 +6,7 @@ import {ProductPage} from './pages/ProductPage';
 import { CartPage } from './pages/CartPage';
 import { SigninPage } from './pages/SigninPage';
 import { RegisterPage } from './pages/RegisterPage';
+import { ProductsPage } from './pages/ProductsPage';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/products" component={ProductsPage} />
             <Route path="/signin" component={SigninPage} />
             <Route path="/register" component={RegisterPage} />
             <Route path="/product/:id" component={ProductPage} />
