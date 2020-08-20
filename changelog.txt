@@ -12,6 +12,9 @@ All notable changes to this project will be documented in this file.
 - Order route.
 - Redux to OrderPage.
 - Ability to add order to MongoDB.
+- PaypalButton component.
+- Pay route.
+- Connect to Paypal.
 
 ### Fixed
 - Product route.
