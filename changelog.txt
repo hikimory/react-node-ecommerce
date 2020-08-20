@@ -15,6 +15,9 @@ All notable changes to this project will be documented in this file.
 - PaypalButton component.
 - Pay route.
 - Connect to Paypal.
+- ProfilePage page.
+- New routes.
+- Actions and types for Redux.
 
 ### Fixed
 - Product route.

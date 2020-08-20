@@ -11,6 +11,7 @@ import { ShippingPage } from './pages/ShippingPage';
 import { PaymentPage } from './pages/PaymentPage';
 import { PlaceOrderPage } from './pages/PlaceOrderPage';
 import { OrderPage } from './pages/OrderPage';
+import { ProfilePage } from './pages/ProfilePage';
 
 function App() {
 
@@ -61,6 +62,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/profile" component={ProfilePage} />
             <Route path="/order/:id" component={OrderPage} />
             <Route path="/products" component={ProductsPage} />
             <Route path="/shipping" component={ShippingPage} />

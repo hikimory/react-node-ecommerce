@@ -2,7 +2,8 @@ import axios from "axios";
 import {
   ORDER_CREATE_REQUEST, ORDER_CREATE_SUCCESS, ORDER_CREATE_FAIL,
   ORDER_DETAILS_REQUEST, ORDER_DETAILS_SUCCESS, ORDER_DETAILS_FAIL, 
-  ORDER_PAY_REQUEST, ORDER_PAY_SUCCESS, ORDER_PAY_FAIL
+  ORDER_PAY_REQUEST, ORDER_PAY_SUCCESS, ORDER_PAY_FAIL, 
+  MY_ORDER_LIST_REQUEST, MY_ORDER_LIST_SUCCESS, MY_ORDER_LIST_FAIL
 } from "../types/orderConstants";
 
 const createOrder = (order) => async (dispatch, getState) => {
@@ -16,6 +17,20 @@ const createOrder = (order) => async (dispatch, getState) => {
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: newOrder });
   } catch (error) {
     dispatch({ type: ORDER_CREATE_FAIL, payload: error.message });
+  }
+}
+
+const listMyOrders = () => async (dispatch, getState) => {
+  try {
+    dispatch({ type: MY_ORDER_LIST_REQUEST });
+    const { userSignin: { userInfo } } = getState();
+    const { data } = await axios.get("/api/orders/mine", {
+      headers:
+      { Authorization: `Bearer ${userInfo.token}` }
+    });
+    dispatch({ type: MY_ORDER_LIST_SUCCESS, payload: data })
+  } catch (error) {
+    dispatch({ type: MY_ORDER_LIST_FAIL, payload: error.message });
   }
 }
 
@@ -47,4 +62,4 @@ const payOrder = (order, paymentResult) => async (dispatch, getState) => {
   }
 }
 
-export { createOrder, detailsOrder, payOrder}; 
+export { createOrder, detailsOrder, payOrder, listMyOrders}; 
