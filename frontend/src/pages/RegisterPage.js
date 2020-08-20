@@ -12,14 +12,15 @@ export const RegisterPage = (props) => {
     const { loading, userInfo, error } = userRegister;
     const dispatch = useDispatch();
 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
     useEffect(() => {
         if (userInfo) {
-          props.history.push("/");
+        props.history.push(redirect);
         }
         return () => {
-          //
+        //
         };
-    }, [userInfo, props.history]);
+    }, [userInfo]);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -64,7 +65,8 @@ export const RegisterPage = (props) => {
                     <button type="submit" className="button primary">Register</button>
                 </li>
                 <li>
-                    Already have an account? <Link to="/signin">Sign-in</Link>
+                Already have an account?
+          <Link to={redirect === "/" ? "signin" : `signin?redirect=${redirect}`} className="button secondary text-center" >Create your amazona account</Link>
                 </li>
             </ul>
         </form>

@@ -7,6 +7,11 @@ import { CartPage } from './pages/CartPage';
 import { SigninPage } from './pages/SigninPage';
 import { RegisterPage } from './pages/RegisterPage';
 import { ProductsPage } from './pages/ProductsPage';
+import { ShippingPage } from './pages/ShippingPage';
+import { PaymentPage } from './pages/PaymentPage';
+import { PlaceOrderPage } from './pages/PlaceOrderPage';
+import { OrderPage } from './pages/OrderPage';
+import { ProfilePage } from './pages/ProfilePage';
 
 function App() {
 
@@ -57,7 +62,12 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/profile" component={ProfilePage} />
+            <Route path="/order/:id" component={OrderPage} />
             <Route path="/products" component={ProductsPage} />
+            <Route path="/shipping" component={ShippingPage} />
+            <Route path="/payment" component={PaymentPage} />
+            <Route path="/placeorder" component={PlaceOrderPage} />
             <Route path="/signin" component={SigninPage} />
             <Route path="/register" component={RegisterPage} />
             <Route path="/product/:id" component={ProductPage} />

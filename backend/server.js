@@ -4,6 +4,7 @@ const data = require('./data')
 const config = require('./config')
 const userRoute = require('./routes/userRoute')
 const productRoute = require('./routes/productRoute')
+const orderRoute = require('./routes/orderRoute')
 
 const PORT = config.PORT
 const app = express()
@@ -12,19 +13,10 @@ app.use(express.json())
 
 app.use("/api/users", userRoute)
 app.use("/api/products", productRoute);
-
-// app.get('/api/products', (req, res) => {
-//     res.send(data)
-// })
-
-// app.get("/api/products/:id", (req, res) => {
-//     const productId = req.params.id;
-//     const product = data.find(x => x._id === productId);
-//     if (product)
-//       res.send(product);
-//     else
-//       res.status(404).send({ msg: "Product Not Found." })
-// });
+app.use("/api/orders", orderRoute);
+app.get("/api/config/paypal", (req, res) => {
+    res.send(config.PAYPAL_CLIENT_ID);
+})
 
 async function start()
 {
