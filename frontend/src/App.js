@@ -10,6 +10,7 @@ import { ProductsPage } from './pages/ProductsPage';
 import { ShippingPage } from './pages/ShippingPage';
 import { PaymentPage } from './pages/PaymentPage';
 import { PlaceOrderPage } from './pages/PlaceOrderPage';
+import { OrderPage } from './pages/OrderPage';
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/order/:id" component={OrderPage} />
             <Route path="/products" component={ProductsPage} />
             <Route path="/shipping" component={ShippingPage} />
             <Route path="/payment" component={PaymentPage} />

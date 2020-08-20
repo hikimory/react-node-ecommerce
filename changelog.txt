@@ -1,15 +1,21 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [0.4.0] - 2020-08-19
+## [0.4.0] - 2020-08-20
 ### Added
 - PaymentPage, PlaceOrderPage, and ShippingPage pages.
 - Redux action and constants for cartReducer.
 - Styles for new pages.
 - CheckoutSteps component.
+- OrderPage page.
+- Order model.
+- Order route.
+- Redux to OrderPage.
+- Ability to add order to MongoDB.
 
 ### Fixed
 - Product route.
+- CartPage qty.
 
 ## [0.3.0] - 2020-08-19
 ### Added
