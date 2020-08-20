@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.4.0] - 2020-08-19
+### Added
+- PaymentPage, PlaceOrderPage, and ShippingPage pages.
+- Redux action and constants for cartReducer.
+- Styles for new pages.
+- CheckoutSteps component.
+
+### Fixed
+- Product route.
+
 ## [0.3.0] - 2020-08-19
 ### Added
 - SigninPage and RegisterPage pages.
