@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Order action.
 - Home page.
+- User model.
 
 ### Removed
 - Console logs.
