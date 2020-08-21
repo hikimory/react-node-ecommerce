@@ -1,2 +1,81 @@
 # Changelog
 All notable changes to this project will be documented in this file.
+
+## [0.5.0] - 2020-08-21
+### Added
+- OrdersPage pages.
+- Additional routes for orders.
+- Redux for orders page.
+- Styles for admin options.
+- Sorting by category and name.
+- Rating component.
+- Route for adding rating.
+- Uploading images.
+
+### Changed
+- Order action.
+- Home page.
+- User model.
+- Product model.
+- Product page.
+
+### Removed
+- Console logs.
+
+## [0.4.0] - 2020-08-20
+### Added
+- PaymentPage, PlaceOrderPage, and ShippingPage pages.
+- Redux action and constants for cartReducer.
+- Styles for new pages.
+- CheckoutSteps component.
+- OrderPage page.
+- Order model.
+- Order route.
+- Redux to OrderPage.
+- Ability to add order to MongoDB.
+- PaypalButton component.
+- Pay route.
+- Connect to Paypal.
+- ProfilePage page.
+- New routes.
+- Actions and types for Redux.
+
+### Fixed
+- Product route.
+- CartPage qty.
+
+## [0.3.0] - 2020-08-19
+### Added
+- SigninPage and RegisterPage pages.
+- Authorization and registration route.
+- Redux to SigninPage and RegisterPage.
+- JWT token.
+- Product model.
+- Product management page.
+- Product route.
+- Middleware.
+- Redux to product management page.
+
+## [0.2.0] - 2020-08-18
+### Added
+- Redux to product page.
+- CartPage.
+- Styles fot cart page.
+- Redux to cart page.
+- Cookie.
+- Connection to MongoDB.
+- User's route.
+- Environment variables.
+
+## [0.1.0] - 2020-08-17
+### Added
+- Base react application.
+- HomePage and ProductPage.
+- Base backend.
+- Nodemon configuration.
+- Axios library.
+- Ability to fetch server data on home page.
+- Redux library.
+
+### Fixed
+- HomePage page.
