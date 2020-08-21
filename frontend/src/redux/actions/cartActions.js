@@ -29,7 +29,6 @@ const removeFromCart = (productId) => (dispatch, getState) => {
     dispatch({ type: CART_REMOVE_ITEM, payload: productId });
 
     const { cart: { cartItems } } = getState();
-    console.log(cartItems)
     Cookie.set("cartItems", JSON.stringify(cartItems));
 }
 
