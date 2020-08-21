@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Sorting by category and name.
 - Rating component.
 - Route for adding rating.
+- Uploading images.
 
 ### Changed
 - Order action.
