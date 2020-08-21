@@ -1,7 +1,12 @@
 const {Router} = require('express')
 const Order = require('../models/Order')
-const { isAuth } = require('../util')
+const { isAuth, isAdmin } = require('../util')
 const router = Router()
+
+router.get("/", isAuth, async (req, res) => {
+  const orders = await Order.find({}).populate('user');
+  res.send(orders);
+});
 
 router.get("/mine", isAuth, async (req, res) => {
   const orders = await Order.find({ user: req.user._id });
@@ -16,6 +21,17 @@ router.get("/:id", isAuth, async (req, res) => {
       res.status(404).send("Order Not Found.")
     }
 });
+
+router.delete("/:id", isAuth, isAdmin, async (req, res) => {
+  const order = await Order.findOne({ _id: req.params.id });
+  if (order) {
+    const deletedOrder = await order.remove();
+    res.send(deletedOrder);
+  } else {
+    res.status(404).send("Order Not Found.")
+  }
+});
+
   
 router.post("/", isAuth, async (req, res) => {
     const newOrder = new Order({

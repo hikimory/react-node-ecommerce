@@ -26,7 +26,6 @@ export const OrderPage = (props) => {
     const orderDetails = useSelector(state => state.orderDetails);
     const { loading, order, error } = orderDetails;
     const payHandler = () => { };
-    console.log(orderDetails)
 
     return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
 
