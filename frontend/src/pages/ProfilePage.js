@@ -31,7 +31,6 @@ export const ProfilePage = (props) => {
   
   useEffect(() => {
     if (userInfo) {
-      console.log(userInfo.name)
       setEmail(userInfo.email);
       setName(userInfo.name);
       setPassword(userInfo.password);

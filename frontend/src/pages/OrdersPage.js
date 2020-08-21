@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listOrders, deleteOrder } from '../redux/actions/orderActions';
 
 export const OrdersPage = (props) => {
-  console.log("dd")
   const orderList = useSelector(state => state.orderList);
   const { loading, orders, error } = orderList;
 
