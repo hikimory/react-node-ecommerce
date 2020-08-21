@@ -8,11 +8,15 @@ All notable changes to this project will be documented in this file.
 - Redux for orders page.
 - Styles for admin options.
 - Sorting by category and name.
+- Rating component.
+- Route for adding rating.
 
 ### Changed
 - Order action.
 - Home page.
 - User model.
+- Product model.
+- Product page.
 
 ### Removed
 - Console logs.

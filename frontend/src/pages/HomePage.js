@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from  '../redux/actions/productActions';
+import { Rating } from '../components/Rating';
 
 export const HomePage = (props) => {
     const [searchKeyword, setSearchKeyword] = useState('');
@@ -57,16 +58,21 @@ export const HomePage = (props) => {
                 products.map(product =>
                 <li key={product._id}>
                     <div className="product">
-                    <Link to={'/product/' + product._id}>
-                        <img className="product-image" src={product.image} alt="product" />
+                        <Link to={'/product/' + product._id}>
+                            <img className="product-image" src={product.image} alt="product" />
 
-                    </Link>
-                    <div className="product-name">
-                        <Link to={'/product/' + product._id}>{product.name}</Link>
-                    </div>
-                    <div className="product-brand">{product.brand}</div>
-                    <div className="product-price">${product.price}</div>
-                    <div className="product-rating">{product.rating} Stars ({product.numReiews} Reviews)</div>
+                        </Link>
+                        <div className="product-name">
+                            <Link to={'/product/' + product._id}>{product.name}</Link>
+                        </div>
+                        <div className="product-brand">{product.brand}</div>
+                        <div className="product-price">${product.price}</div>
+                        <div className="product-rating">
+                            <Rating
+                            value={product.rating}
+                            text={product.numReviews + ' reviews'}
+                        />
+                        </div>
                     </div>
                 </li>)
             }
